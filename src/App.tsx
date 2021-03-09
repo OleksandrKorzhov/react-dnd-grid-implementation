@@ -90,7 +90,6 @@ const DragSource = React.forwardRef<any, DragItem & { name: string; viewComponen
         [dragItem],
     );
 
-    // @TODO: check can we avoid this or not
     useImperativeHandle(ref, () => ({
         getNode: (): HTMLDivElement | null => viewRef.current,
     }));
